@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#0A0E17"/>
+  <rect x="1" y="1" width="62" height="62" rx="15" stroke="url(#borderGlow)" stroke-width="2"/>
+  <defs>
+    <linearGradient id="borderGlow" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="0.5" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="pGrad" x1="16" y1="14" x2="48" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="0.5" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <filter id="glow" x="0" y="0" width="64" height="64" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <!-- Background subtle glow -->
+  <circle cx="32" cy="32" r="16" fill="#3B82F6" opacity="0.18" filter="url(#glow)"/>
+  <!-- Pinnacle P Symbol -->
+  <path d="M20 16H34.5C41.4036 16 47 21.3726 47 28C47 34.6274 41.4036 40 34.5 40H28V48H20V16ZM28 23V33H34.5C37.5376 33 40 30.7614 40 28C40 25.2386 37.5376 23 34.5 23H28Z" fill="url(#pGrad)"/>
+  <!-- Glowing Dot Accent -->
+  <circle cx="43" cy="46" r="3.5" fill="#38BDF8"/>
+</svg>

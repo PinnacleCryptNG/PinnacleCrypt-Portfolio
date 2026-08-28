@@ -1,0 +1,6 @@
+{
+  "name": "PinnacleCrypt",
+  "description": "Minimalist editorial portfolio for PinnacleCrypt — Content Creator, Web3 Event Organizer, and AI Product Builder.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
