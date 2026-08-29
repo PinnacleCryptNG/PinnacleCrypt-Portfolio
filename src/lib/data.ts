@@ -21,7 +21,7 @@ export const PERSONAL_INFO = {
   links: {
     x: 'https://x.com/PinnacleCrypt',
     telegram: 'https://t.me/PinnacleCrypt',
-    github: 'https://github.com/pinnaclecrypt',
+    github: 'https://github.com/PinnacleCryptNG',
     medium: 'https://medium.com/@Pinnacle_TheEnchanter',
     devto: 'https://dev.to/pinnaclecrypt',
     prompted: 'https://www.prmpted.com/pinnacle',

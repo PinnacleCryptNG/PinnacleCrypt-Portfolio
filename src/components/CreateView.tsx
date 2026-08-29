@@ -142,15 +142,15 @@ export const CreateView: React.FC<CreateViewProps> = ({ onSelectArticle, onNavig
       {/* Articles Grid / Empty States */}
       {activePlatformFilter === 'medium' && mediumArticlesCount === 0 ? (
         /* Dedicated Medium Placeholder Section */
-        <div className="text-center py-20 bg-[#0E1320] rounded-3xl border border-blue-500/20 p-8 space-y-5 max-w-2xl mx-auto shadow-xl">
+        <div className="text-center py-16 sm:py-20 bg-[#0E1320] rounded-3xl border border-blue-500/20 p-6 sm:p-8 space-y-5 max-w-2xl mx-auto shadow-xl">
           <div className="w-14 h-14 rounded-full bg-blue-950/60 border border-blue-500/40 text-blue-400 flex items-center justify-center mx-auto">
             <BookOpen className="w-7 h-7 text-sky-400" />
           </div>
           <div className="space-y-2">
-            <h3 className="font-serif-editorial text-3xl text-white">
+            <h3 className="font-serif-editorial text-2xl sm:text-3xl text-white">
               Medium Articles Coming Soon
             </h3>
-            <p className="text-sm text-neutral-300 font-sans-clean leading-relaxed max-w-md mx-auto">
+            <p className="text-xs sm:text-sm text-neutral-300 font-sans-clean leading-relaxed max-w-md mx-auto">
               Long-form Medium research, technical theses, and in-depth essays will be published here soon.
             </p>
           </div>
@@ -176,7 +176,7 @@ export const CreateView: React.FC<CreateViewProps> = ({ onSelectArticle, onNavig
           </div>
         </div>
       ) : filteredArticles.length === 0 ? (
-        <div className="text-center py-20 bg-[#0E1320] rounded-3xl border border-blue-500/20 p-8 space-y-4">
+        <div className="text-center py-16 sm:py-20 bg-[#0E1320] rounded-3xl border border-blue-500/20 p-6 sm:p-8 space-y-4">
           <p className="text-neutral-300 font-mono-tech text-sm">No research publications match your selected filter.</p>
           <button
             onClick={() => {
@@ -190,7 +190,7 @@ export const CreateView: React.FC<CreateViewProps> = ({ onSelectArticle, onNavig
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {filteredArticles.map((article, idx) => {
             const isMedium = article.platform === 'medium';
             return (
@@ -199,13 +199,13 @@ export const CreateView: React.FC<CreateViewProps> = ({ onSelectArticle, onNavig
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: idx * 0.04 }}
-                onClick={() => window.open(article.url, '_blank', 'noopener,noreferrer')}
-                className="group relative flex flex-col justify-between p-5 rounded-3xl bg-[#0E1320] border border-blue-500/20 hover:border-blue-400/60 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-[0_10px_30px_rgba(59,130,246,0.15)] cursor-pointer"
+                onClick={() => onSelectArticle(article)}
+                className="group relative flex flex-col justify-between p-4 sm:p-5 rounded-3xl bg-[#0E1320] border border-blue-500/20 hover:border-blue-400/60 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-[0_10px_30px_rgba(59,130,246,0.15)] cursor-pointer w-full max-w-full overflow-hidden"
               >
-                <div className="space-y-4">
+                <div className="space-y-3.5 sm:space-y-4 w-full">
                   {/* Cover Image Banner */}
                   {article.image && (
-                    <div className="relative w-full h-48 rounded-2xl overflow-hidden bg-neutral-950 border border-white/10 group-hover:border-blue-400/40 transition-colors">
+                    <div className="relative w-full h-44 sm:h-48 rounded-2xl overflow-hidden bg-neutral-950 border border-white/10 group-hover:border-blue-400/40 transition-colors">
                       <img
                         src={article.image}
                         alt={article.title}
@@ -238,25 +238,25 @@ export const CreateView: React.FC<CreateViewProps> = ({ onSelectArticle, onNavig
                   )}
 
                   {/* Metadata Row */}
-                  <div className="flex items-center justify-between text-[11px] font-mono-tech text-neutral-400">
+                  <div className="flex flex-wrap items-center justify-between gap-1.5 text-[11px] font-mono-tech text-neutral-400">
                     <span className="px-2.5 py-0.5 rounded-full bg-blue-950/60 border border-blue-500/30 text-blue-300">
                       {article.category}
                     </span>
-                    <span>{article.date} · {article.readTime}</span>
+                    <span className="truncate">{article.date} · {article.readTime}</span>
                   </div>
 
                   {/* Title & Excerpt */}
-                  <h3 className="font-serif-editorial text-2xl text-[#F0F4F8] group-hover:text-blue-300 transition-colors leading-snug">
+                  <h3 className="font-serif-editorial text-xl sm:text-2xl text-[#F0F4F8] group-hover:text-blue-300 transition-colors leading-snug break-words">
                     {article.title}
                   </h3>
 
-                  <p className="text-xs text-neutral-400 line-clamp-3 leading-relaxed font-sans-clean">
+                  <p className="text-xs text-neutral-400 line-clamp-3 leading-relaxed font-sans-clean break-words">
                     {article.subtitle || article.excerpt}
                   </p>
                 </div>
 
                 {/* Bottom Direct Link Action */}
-                <div className="pt-5 mt-4 border-t border-white/10 flex items-center justify-between">
+                <div className="pt-4 mt-3 sm:pt-5 sm:mt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-2">
                   <span className="text-[11px] font-mono-tech text-neutral-400">
                     {isMedium ? 'Medium Essay' : 'X Thread'}
                   </span>
@@ -266,7 +266,7 @@ export const CreateView: React.FC<CreateViewProps> = ({ onSelectArticle, onNavig
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
-                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/20 hover:bg-blue-600 border border-blue-500/30 text-blue-300 hover:text-white text-xs font-mono-tech font-bold uppercase tracking-wider transition-all cursor-pointer shadow-sm hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
+                    className="flex items-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-blue-600/20 hover:bg-blue-600 border border-blue-500/30 text-blue-300 hover:text-white text-xs font-mono-tech font-bold uppercase tracking-wider transition-all cursor-pointer shadow-sm hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
                     aria-label={`Open ${article.title} on ${isMedium ? 'Medium' : 'X'}`}
                   >
                     {isMedium ? (

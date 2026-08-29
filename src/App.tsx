@@ -13,6 +13,7 @@ import { EventModal } from './components/EventModal';
 import { ProductModal } from './components/ProductModal';
 import { LegalModal, LegalTab } from './components/LegalModal';
 import { LoadingScreen } from './components/LoadingScreen';
+import { InteractiveSpotlight } from './components/InteractiveSpotlight';
 import { ArticleItem, EventItem, ShippedProduct, PageView } from './types';
 
 export default function App() {
@@ -65,6 +66,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#07090E] text-[#F0F4F8] relative flex flex-col justify-between selection:bg-blue-600/30 selection:text-white font-sans-clean">
+      {/* Exotic Interactive Ambient Spotlight Cursor */}
+      <InteractiveSpotlight />
+
       {/* Global Interactive Loading Animation */}
       <AnimatePresence>
         {isLoading && (

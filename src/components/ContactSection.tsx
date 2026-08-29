@@ -70,7 +70,7 @@ export const ContactSection: React.FC = () => {
         number="05"
         pill="CONNECT"
         title="Initiate Dialogue"
-        subtitle="Available for keynote hosting, technical essay commissions, protocol research, and autonomous product consulting."
+        subtitle="Keynote hosting, technical essay commissions, protocol research, and autonomous product consulting."
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">

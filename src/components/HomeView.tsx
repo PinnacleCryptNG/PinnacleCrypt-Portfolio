@@ -13,35 +13,43 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
     <div className="min-h-screen bg-[#07090E] text-[#F0F4F8] flex flex-col justify-between pt-24 sm:pt-28 pb-12 px-5 sm:px-8 max-w-5xl mx-auto selection:bg-blue-600/30 selection:text-white font-sans-clean">
       {/* Main Centered Hero Block */}
       <div className="my-auto py-8 sm:py-14 space-y-7 sm:space-y-9">
-        {/* Availability Badge */}
+        {/* Roles & Profile Avatar (Sample Inspired Layout) */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-blue-500/30 text-xs font-mono-tech tracking-wider uppercase text-blue-400 bg-blue-950/40 shadow-md"
+          className="flex items-center justify-between gap-3 sm:gap-4 w-full"
         >
-          <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse" />
-          <span>AVAILABLE FOR RESEARCH, EVENTS & PRODUCT BUILDS</span>
-        </motion.div>
+          {/* Roles (Single Straight Line on Mobile & Desktop) */}
+          <div className="flex items-center flex-nowrap whitespace-nowrap overflow-x-auto no-scrollbar gap-1.5 sm:gap-3 text-[11px] sm:text-sm font-mono-tech tracking-tight sm:tracking-wider uppercase text-neutral-400 font-medium py-1">
+            <span className="text-blue-400 shrink-0">
+              Shipping AI Products
+            </span>
+            <span className="text-neutral-600 shrink-0">•</span>
+            <span className="text-neutral-300 shrink-0">
+              Content Architect
+            </span>
+            <span className="text-neutral-600 shrink-0">•</span>
+            <span className="text-neutral-300 shrink-0">
+              Events & Public Speaking
+            </span>
+          </div>
 
-        {/* Roles / Sub-headline Tags */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs sm:text-sm font-mono-tech tracking-wider uppercase text-neutral-300 font-medium"
-        >
-          <span className="px-3 py-1 rounded-full bg-[#0E1320] border border-blue-500/30 text-blue-300">
-            Shipping AI Products
-          </span>
-          <span className="text-neutral-600 hidden sm:inline">•</span>
-          <span className="px-3 py-1 rounded-full bg-[#0E1320] border border-white/10 text-neutral-300">
-            Medium & Content Architect
-          </span>
-          <span className="text-neutral-600 hidden sm:inline">•</span>
-          <span className="px-3 py-1 rounded-full bg-[#0E1320] border border-white/10 text-neutral-300">
-            Events & Public Speaking
-          </span>
+          {/* Circular Glowing PFP on Far Right Side */}
+          <div className="relative flex-shrink-0 group ml-2">
+            <div className="relative w-11 h-11 sm:w-14 sm:h-14 rounded-full overflow-hidden border-2 border-blue-500/40 bg-[#0E1320] shadow-[0_0_20px_rgba(59,130,246,0.4)] group-hover:border-sky-400 group-hover:shadow-[0_0_30px_rgba(56,189,248,0.6)] transition-all duration-300">
+              <img
+                src="/pfp.jpg"
+                alt="PinnacleCrypt Avatar"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            {/* Ambient Pulse Dot */}
+            <span className="absolute bottom-0 right-0 flex h-3 w-3 sm:h-3.5 sm:w-3.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-3 w-3 sm:h-3.5 sm:w-3.5 bg-sky-500 border-2 border-[#07090E]" />
+            </span>
+          </div>
         </motion.div>
 
         {/* Typographic Headline */}

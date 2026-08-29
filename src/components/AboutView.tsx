@@ -89,11 +89,20 @@ export const AboutView: React.FC<AboutViewProps> = ({ onNavigate }) => {
         </div>
 
         {/* Quick Profile Summary Card */}
-        <div className="lg:col-span-4 p-8 rounded-3xl bg-[#0E1320] border border-blue-500/20 space-y-6 shadow-xl">
-          <div className="space-y-1">
-            <div className="text-xs font-mono-tech text-blue-400 uppercase tracking-widest">Profile Card</div>
-            <h3 className="font-serif-editorial text-2xl text-white">PinnacleCrypt</h3>
-            <p className="text-xs font-mono-tech text-neutral-400">@PinnacleCrypt</p>
+        <div className="lg:col-span-4 p-7 sm:p-8 rounded-3xl bg-[#0E1320] border border-blue-500/20 space-y-6 shadow-xl">
+          <div className="flex items-center gap-4">
+            <div className="relative w-16 h-16 rounded-2xl overflow-hidden border-2 border-blue-500/40 bg-neutral-950 shadow-[0_0_20px_rgba(59,130,246,0.3)] shrink-0">
+              <img
+                src="/pfp.jpg"
+                alt="PinnacleCrypt"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="space-y-1">
+              <div className="text-[10px] font-mono-tech text-blue-400 uppercase tracking-widest">Profile Card</div>
+              <h3 className="font-serif-editorial text-2xl text-white">PinnacleCrypt</h3>
+              <p className="text-xs font-mono-tech text-neutral-400">@PinnacleCrypt</p>
+            </div>
           </div>
 
           <div className="space-y-3 text-xs font-mono-tech text-neutral-300 pt-4 border-t border-white/10">

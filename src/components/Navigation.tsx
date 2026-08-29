@@ -146,15 +146,11 @@ export const Navigation: React.FC<NavigationProps> = ({ currentPage, onNavigate 
               {/* Side Info & Direct Telegram Box */}
               <div className="md:col-span-4 space-y-8 md:pl-10 md:border-l border-white/10">
                 <div className="space-y-3">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 text-xs font-mono-tech text-blue-400 bg-blue-950/40">
-                    <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse" />
-                    <span>AVAILABLE FOR PROJECTS</span>
-                  </div>
                   <h4 className="font-display font-bold text-xl text-white">
                     Let's collaborate on your next vision.
                   </h4>
                   <p className="text-sm text-neutral-300 leading-relaxed font-sans-clean">
-                    Have an idea for Web3 research, summit organizing, Medium publications, or digital products? Reach out directly on Telegram.
+                    Have an idea for Web3 research, summit organizing, technical writing, or digital products? Reach out directly on Telegram.
                   </p>
                 </div>
 

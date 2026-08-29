@@ -47,7 +47,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ onNavigate }) => {
           <MessageSquare className="w-3.5 h-3.5 text-blue-400" />
           <span>START A CONVERSATION</span>
         </div>
-        <h1 className="font-serif-editorial text-4xl sm:text-6xl md:text-7xl text-[#F0F4F8] tracking-tight leading-tight">
+        <h1 className="font-poppins font-bold text-3xl sm:text-5xl md:text-6xl text-[#F0F4F8] tracking-tight leading-tight">
           Let's Build Something Exceptional.
         </h1>
         <p className="text-neutral-300 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
@@ -122,7 +122,7 @@ export const ContactView: React.FC<ContactViewProps> = ({ onNavigate }) => {
               >
                 <div className="flex items-center gap-3">
                   <Github className="w-4 h-4 text-neutral-300" />
-                  <span>GitHub (@pinnaclecrypt)</span>
+                  <span>GitHub (@PinnacleCryptNG)</span>
                 </div>
                 <span className="text-neutral-400">→</span>
               </a>
