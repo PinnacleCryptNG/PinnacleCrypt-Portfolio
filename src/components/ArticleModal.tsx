@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Twitter, ArrowUpRight, BookOpen, Heart } from 'lucide-react';
+import { X, ArrowUpRight, BookOpen, Heart } from 'lucide-react';
 import { ArticleItem } from '../types';
+import { XIcon } from './XIcon';
 
 interface ArticleModalProps {
   article: ArticleItem | null;
@@ -124,7 +125,7 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
                 </>
               ) : (
                 <>
-                  <Twitter className="w-3.5 h-3.5 text-sky-300" />
+                  <XIcon className="w-3.5 h-3.5 text-sky-300" />
                   <span>Read Full Thread on X</span>
                 </>
               )}

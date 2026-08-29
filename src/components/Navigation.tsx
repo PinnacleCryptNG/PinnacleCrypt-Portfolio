@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Send, X, ArrowUpRight, Sparkles, Twitter, Github, Mail, Globe, Layers, BookOpen, Users, Code, Info, MessageSquare } from 'lucide-react';
+import { Send, X, ArrowUpRight, Sparkles, Github, Mail, Globe, Layers, BookOpen, Users, Code, Info, MessageSquare } from 'lucide-react';
 import { PERSONAL_INFO } from '../lib/data';
 import { PageView } from '../types';
+import { XIcon } from './XIcon';
 
 interface NavigationProps {
   currentPage: PageView;
@@ -174,9 +175,10 @@ export const Navigation: React.FC<NavigationProps> = ({ currentPage, onNavigate 
                       href={PERSONAL_INFO.links.x}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-blue-400 underline underline-offset-4"
+                      className="inline-flex items-center gap-1 hover:text-white underline underline-offset-4"
                     >
-                      Twitter / X
+                      <XIcon className="w-3 h-3" />
+                      <span>X (Twitter)</span>
                     </a>
                     <a
                       href={PERSONAL_INFO.links.medium}

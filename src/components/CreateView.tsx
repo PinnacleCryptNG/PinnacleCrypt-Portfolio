@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Twitter, ArrowUpRight, Sparkles, BookOpen, Search, Send, ArrowLeft, Heart, ExternalLink } from 'lucide-react';
+import { ArrowUpRight, Sparkles, BookOpen, Search, Send, ArrowLeft, Heart, ExternalLink } from 'lucide-react';
 import { ARTICLES_DATA, PERSONAL_INFO } from '../lib/data';
 import { ArticleItem, PageView } from '../types';
+import { XIcon } from './XIcon';
 
 interface CreateViewProps {
   onSelectArticle: (article: ArticleItem) => void;
@@ -100,8 +101,8 @@ export const CreateView: React.FC<CreateViewProps> = ({ onSelectArticle, onNavig
                   : 'text-neutral-400 hover:text-white'
               }`}
             >
-              <Twitter className="w-3.5 h-3.5 text-sky-400 shrink-0" />
-              <span>X / Twitter Theses ({xArticlesCount})</span>
+              <XIcon className="w-3.5 h-3.5 text-sky-400 shrink-0" />
+              <span>X Theses ({xArticlesCount})</span>
             </button>
           </div>
 
@@ -222,7 +223,7 @@ export const CreateView: React.FC<CreateViewProps> = ({ onSelectArticle, onNavig
                           </span>
                         ) : (
                           <span className="px-2.5 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-[10px] font-mono-tech text-sky-400 font-bold uppercase flex items-center gap-1">
-                            <Twitter className="w-3 h-3" />
+                            <XIcon className="w-3 h-3" />
                             <span>X Thread</span>
                           </span>
                         )}
@@ -276,7 +277,7 @@ export const CreateView: React.FC<CreateViewProps> = ({ onSelectArticle, onNavig
                       </>
                     ) : (
                       <>
-                        <Twitter className="w-3.5 h-3.5 text-sky-400" />
+                        <XIcon className="w-3.5 h-3.5 text-sky-400" />
                         <span>Read on X</span>
                       </>
                     )}

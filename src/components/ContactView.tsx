@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Send, Twitter, Github, Mail, Sparkles, CheckCircle2, MessageSquare, ArrowLeft, BookOpen } from 'lucide-react';
+import { Send, Github, Mail, Sparkles, CheckCircle2, MessageSquare, ArrowLeft, BookOpen } from 'lucide-react';
 import { PERSONAL_INFO } from '../lib/data';
 import { PageView } from '../types';
+import { XIcon } from './XIcon';
 
 interface ContactViewProps {
   onNavigate: (page: PageView) => void;
@@ -95,8 +96,8 @@ export const ContactView: React.FC<ContactViewProps> = ({ onNavigate }) => {
                 className="flex items-center justify-between p-3 rounded-xl bg-white/5 hover:bg-blue-950/40 border border-white/5 hover:border-blue-500/30 text-white transition-colors cursor-pointer"
               >
                 <div className="flex items-center gap-3">
-                  <Twitter className="w-4 h-4 text-sky-400" />
-                  <span>Twitter / X (@PinnacleCrypt)</span>
+                  <XIcon className="w-4 h-4 text-white" />
+                  <span>X / Twitter (@PinnacleCrypt)</span>
                 </div>
                 <span className="text-neutral-400">→</span>
               </a>
